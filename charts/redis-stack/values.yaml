@@ -1,10 +1,10 @@
-name: redis-stack
+name: "{{ .Release.Name }}-redis-master"
 redis_stack:
   image: "redis/redis-stack"
   tag: "7.2.0-v6"
   redis_insight: "redis-insight"
   redis_insight_port: 8001
   redis_server_port: 6379
-  replicas: 1
+  replicas: 2
   memory: 1Gi
   cpu: 100m
